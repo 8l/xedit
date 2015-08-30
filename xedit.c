@@ -325,9 +325,11 @@ makeButtonsAndBoxes(Widget parent)
  
     b_row = XtCreateManagedWidget("buttons", panedWidgetClass, outer, NULL, ZERO);
     {
+#if 0
 	MakeCommandButton(b_row, "quit", DoQuit);
 	MakeCommandButton(b_row, "save", DoSave);
 	MakeCommandButton(b_row, "load", DoLoad);
+#endif
 	filenamewindow = MakeStringBox(b_row, "filename", NULL);
     }
     hintswindow = XtCreateManagedWidget("bc_label", labelWidgetClass,
